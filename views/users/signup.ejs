@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate') %>
+<diV class="row">
+    <div class="col-6 offset-3 mt-3 " > 
+        <h2>SignUp on Willowstay!</h2> 
+        <form action="/signup" method="post" class="needs-validation" novalidate>
+            <div class="mb-3 mt-2">
+            <label for="username" class="form-label">Username</label>
+            <input name="username" id="username"  placeholder="Enter Username" type="text" class="form-control" required>
+            <div class="valid-feedback">Look's good!</div>
+            </div>
+
+             <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input name="email" id="email"  placeholder="Enter email" type="email" class="form-control" required>
+            </div>
+
+             <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input name="password" id="password"  placeholder="Enter password" type="text" class="form-control" required>
+            </div>
+            <button class="btn btn-success">SignUp</button>
+        </form>
+    </div>
+</diV>

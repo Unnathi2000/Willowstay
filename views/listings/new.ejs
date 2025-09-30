@@ -1,0 +1,78 @@
+<% layout('layouts/boilerplate') %>
+    <diV class="row">
+        <div class="col-6 offset-3">
+            <br>
+            <h3>Add new Listing</h3>
+            <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input name="listing[title]" placeholder="Add Title" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid title</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="listing[description]" type="text" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please enter a short description</div>
+                </div>
+
+                <!-- <div class="mb-3">
+            <label for="image" class="form-label">Image Link</label>
+            <input name="listing[image]" placeholder="Add image URL" type="text" class="form-control" >  
+        </div> -->
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Image</label>
+                    <input name="listing[image]" placeholder="Add image" type="file" class="form-control">
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="listing[price]" placeholder="$500" type="number" class="form-control" required>
+                        <div class="invalid-feedback">Please enter a valid Price</div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label for="type" class="form-label">Type</label>
+                        <select name="listing[type]" id="type" class="form-select" required>
+                            <option value="">Select type</option>
+                            <option value="Trending">Trending</option>
+                            <option value="Party">Party</option>
+                            <option value="Rooms">Rooms</option>
+                            <option value="Cruise">Cruise</option>
+                            <option value="Iconic cities">Iconic cities</option>
+                            <option value="Pools">Pools</option>
+                            <option value="Mountains">Mountains</option>
+                            <option value="Castles">Castles</option>
+                            <option value="Camping">Camping</option>
+                            <option value="Farms">Farms</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Arctic">Arctic</option>
+                            <option value="Domes">Domes</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a type</div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="mb-3 col-md-4">
+                        <label for="country" class="form-label">Country</label>
+                        <input name="listing[country]" placeholder="United States" type="text" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Please enter a valid country</div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="form-label">Location</label>
+                        <input name="listing[location]" placeholder="New York, Cleveland" type="text"
+                            class="form-control" required>
+                        <div class="invalid-feedback">Please enter a valid location</div>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-dark add-btn">Add</button>
+            </form> <br> <br>
+        </div>
+    </diV>
