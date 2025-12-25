@@ -27,4 +27,7 @@ router.route("/:id")
 // Filter by type
 router.get("/type/:type", wrapAsync(controlllerListing.filterByType));
 
+
+
+
 module.exports=router;
