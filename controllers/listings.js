@@ -66,6 +66,7 @@ module.exports.editListing= async(req,res)=>{
     }
     let originalImage=listing.image.url;
     originalImage= originalImage.replace("/upload","/upload/w_250");
+    console.log(originalImage);
  res.render("listings/edit.ejs",{listing , originalImage});
 }
 
